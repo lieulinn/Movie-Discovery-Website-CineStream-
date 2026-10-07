@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineStream — Movie Discovery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Cine<span>Stream</span></a>
+      <nav class="nav-links">
+        <a href="#featured" class="nav-link">Home</a>
+        <a href="#trending" class="nav-link">Trending</a>
+        <a href="#popular" class="nav-link">Popular</a>
+        <a href="#top-rated" class="nav-link">Top Rated</a>
+      </nav>
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search movies...">
+      </div>
+    </div>
+  </header>
+
+  <!-- FEATURED HERO MOVIE -->
+  <section class="hero-featured" id="featured">
+    <div class="hero-backdrop" id="heroBackdrop"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="badge-featured"><i class="fa-solid fa-fire"></i> FEATURED MOVIE</div>
+      <h1 id="heroTitle">Cyberpunk: Edgerunners</h1>
+      <div class="hero-meta">
+        <span class="rating"><i class="fa-solid fa-star"></i> <span id="heroRating">8.9</span></span>
+        <span class="genre-tag" id="heroGenre">Sci-Fi / Action</span>
+        <span class="year" id="heroYear">2026</span>
+      </div>
+      <p id="heroSynopsis">Di masa depan yang terobsesi dengan teknologi dan modifikasi tubuh, seorang anak jalanan mencoba bertahan hidup dengan menjadi mercenary outlaws.</p>
+      <div class="hero-actions">
+        <button class="btn btn-primary" id="heroWatchBtn"><i class="fa-solid fa-play"></i> Watch Details</button>
+        <button class="btn btn-secondary" id="heroTrailerBtn"><i class="fa-solid fa-circle-info"></i> More Info</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CATALOG -->
+  <main class="container main-content">
+
+    <!-- GENRE FILTER BUTTONS -->
+    <section class="genres-section">
+      <h3 class="section-subtitle">Browse by Genre</h3>
+      <div class="genre-pills" id="genrePills">
+        <button class="pill active" data-genre="All">All Genres</button>
+        <button class="pill" data-genre="Action">Action</button>
+        <button class="pill" data-genre="Sci-Fi">Sci-Fi</button>
+        <button class="pill" data-genre="Drama">Drama</button>
+        <button class="pill" data-genre="Thriller">Thriller</button>
+        <button class="pill" data-genre="Animation">Animation</button>
+      </div>
+    </section>
+
+    <!-- SECTION: TRENDING -->
+    <section class="movie-section" id="trending">
+      <h2 class="section-title"><i class="fa-solid fa-fire-flame-curved"></i> Trending Now</h2>
+      <div class="movie-grid" id="trendingGrid"></div>
+    </section>
+
+    <!-- SECTION: POPULAR -->
+    <section class="movie-section" id="popular">
+      <h2 class="section-title"><i class="fa-solid fa-chart-line"></i> Popular Movies</h2>
+      <div class="movie-grid" id="popularGrid"></div>
+    </section>
+
+    <!-- SECTION: TOP RATED -->
+    <section class="movie-section" id="top-rated">
+      <h2 class="section-title"><i class="fa-solid fa-award"></i> Top Rated</h2>
+      <div class="movie-grid" id="topRatedGrid"></div>
+    </section>
+
+    <!-- SEARCH RESULTS SECTION (HIDDEN BY DEFAULT) -->
+    <section class="movie-section search-results-section" id="searchResultsSection" style="display: none;">
+      <h2 class="section-title">Search Results</h2>
+      <div class="movie-grid" id="searchGrid"></div>
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <i class="fa-solid fa-film"></i>
+        <h3>No movies found</h3>
+        <p>Coba kata kunci atau judul film yang lain.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- MOVIE DETAIL MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card">
+      <button class="close-modal" id="closeModal">&times;</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2026 CineStream Discovery. Built for portfolio preview.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
